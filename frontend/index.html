@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriceFinder - Scan & Find Prices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💰 PriceFinder</h1>
+            <p>Scan an item and find its price instantly</p>
+        </header>
+
+        <main>
+            <div class="scan-section">
+                <div class="camera-container">
+                    <video id="video" autoplay playsinline></video>
+                    <canvas id="canvas" style="display: none;"></canvas>
+                    <div id="preview-container" style="display: none;">
+                        <img id="preview" alt="Preview">
+                        <button id="retake-btn" class="btn btn-secondary">Retake Photo</button>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="start-camera-btn" class="btn btn-primary">📷 Start Camera</button>
+                    <button id="capture-btn" class="btn btn-primary" style="display: none;">📸 Capture</button>
+                    <button id="upload-btn" class="btn btn-secondary">📁 Upload Image</button>
+                    <input type="file" id="file-input" accept="image/*" style="display: none;">
+                    <button id="search-btn" class="btn btn-secondary">🔍 Search by Name</button>
+                </div>
+
+                <div class="search-input-container" id="search-input-container" style="display: none;">
+                    <input type="text" id="item-name-input" placeholder="Enter item name (e.g., iPhone 15, Nike shoes)">
+                    <button id="submit-search-btn" class="btn btn-primary">Search Price</button>
+                </div>
+            </div>
+
+            <div class="results-section" id="results-section" style="display: none;">
+                <div class="loading" id="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Searching for prices...</p>
+                </div>
+
+                <div class="result-card" id="result-card">
+                    <h2 id="item-name-display"></h2>
+                    <div class="price-info" id="price-info"></div>
+                </div>
+            </div>
+
+            <div class="error-message" id="error-message" style="display: none;"></div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
