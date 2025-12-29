@@ -1,6 +1,5 @@
 # 💰 PriceFinder
 
-
 A web application that allows users to scan items and find their prices by searching online shopping platforms. The app recognizes items from images (with optional Google Vision API) and retrieves pricing information from Google Shopping.
 
 ## Features
